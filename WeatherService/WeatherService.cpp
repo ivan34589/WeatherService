@@ -3,15 +3,15 @@
 #include "Weather.h"
 #include "json.hpp"
 #include "XmlService.h"
-//#include "JsonService.h"
+#include "JsonService.h"
 
 int main()
 {
-    //JsonService js;
-    //Weather w1 = js.getWeather("weather.json");
-
     XmlService xs;
-    Weather w = xs.getWeather("weather.xml");
+    Weather w1 = xs.getWeather("weather.xml");
+
+    JsonService js;
+    Weather w2 = js.getWeather("weather.json");
 
     return 0;
 }
